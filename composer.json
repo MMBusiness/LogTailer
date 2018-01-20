@@ -3,7 +3,7 @@
     "description": "Tail for log files",
     "type": "core-logtailer",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {},
     "require-dev": {},
     "autoload": {

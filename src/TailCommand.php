@@ -4,10 +4,11 @@ use SplFileInfo;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Symfony\Component\Process\Process;
+
 class TailCommand extends Command
 {
     protected $signature = 'tail {--lines=100}';
-    protected $description = 'Tail the latest logfile by MikroMike ';
+    protected $description = 'Tail the latest updated logfile even from subdirectory  ';
     public function handle()
     {
         $logDirectory = storage_path('logs');
