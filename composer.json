@@ -9,9 +9,11 @@
     "psr-4": {
         "Mikromike\\LogTailer\\": "src/"
     },
-    "repositories": [
+    "repositories":
     {
         "type": "vcs",
         "url": "https://github.com/MMBusiness/core.git"
 
+}
+}
 }
