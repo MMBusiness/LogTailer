@@ -1,6 +1,6 @@
 {
     "name": "mikromike/logtailer",
-    "description": "Tail for files",
+    "description": "Tail for log files",
     "type": "core-logtailer",
     "license": "MIT",
     "minimum-stability": "dev",
