@@ -1,0 +1,2 @@
+# LogTailer
+First Core component
