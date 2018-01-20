@@ -1,0 +1,17 @@
+{
+    "name": "mikromike/logtailer",
+    "description": "Tail for files",
+    "type": "core-logtailer",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+    "psr-4": {
+        "Mikromike\\LogTailer\\": "src/"
+    },
+    "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/MMBusiness/core.git"
+
+},
