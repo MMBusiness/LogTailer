@@ -1,2 +1,2 @@
 # LogTailer
-First Core component
+First Core component:      LogTailer
