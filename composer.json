@@ -1,6 +1,6 @@
 {
     "name": "mikromike/logtailer",
-    "description": "Tail for log files",
+    "description": "Tail for log files via LARAVEL cli",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
