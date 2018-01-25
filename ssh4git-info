@@ -1,0 +1,25 @@
+First step:
+// /home/username/.ssh/config
+Host github.com
+     HostName ssh.github.com       //note: ssh.   otherwise won't work!
+     Port 443                     // note, it is https port not ssh standard 22.
+ 	   PreferredAuthentications publickey
+	   IdentityFile  ~/username/.git/sshkey4.git.pub
+                                // note UserName is not here, it will be in /.git/config file
+
+   // under same folder priv key for sshkey4.git
+
+Second step:
+//  .git/config  // Note now works via ssh
+
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[remote "component"]
+        url = git@github.com:Gitusername/component.git   /// this is issue git@github.com:
+        fetch = +refs/heads/*:refs/remotes/component/*
+[branch "master"]
+        remote = component
+        merge = refs/heads/master
