@@ -1,23 +1,20 @@
 {
     "name": "mikromike/logtailer",
     "description": "Tail for log files",
-    "type": "core-logtailer",
+    "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
     "require": {},
     "require-dev": {},
     "autoload": {
-      "classmap": [
-          
-      ],
-    "psr-4": {
-        "Mikromike\\LogTailer\\": "src/"
-      }
+        "psr-4": {
+          "Mikromike\\LogTailer\\": "src/"
+        }
     },
-    "repositories":
-    {
+    "repositories": [
+      {
         "type": "vcs",
         "url": "https://github.com/MMBusiness/LogTailer.git"
-
-}
+      }
+    ]
 }

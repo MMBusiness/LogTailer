@@ -1,0 +1,24 @@
+#.core/component/logtailer $ composer show -s
+name     : mikromike/logtailer
+descrip. : Tail for log files
+keywords :
+versions : * dev-master
+type     : library
+license  : MIT License (MIT) (OSI approved) https://spdx.org/licenses/MIT.html#licenseText
+source   : []  f0defd0c6c6670ec0d382185e3bc54a36d7c4236
+dist     : []  f0defd0c6c6670ec0d382185e3bc54a36d7c4236
+names    : mikromike/logtailer
+
+autoload
+psr-4
+Mikromike\LogTailer\ => src/
+
+
+# composer search mikromike
+mikromike/logtailer Tail for log files
+
+#composer validate
+./composer.json is valid
+
+#composer require mikromike/logtailer
+// way to install package via composer
