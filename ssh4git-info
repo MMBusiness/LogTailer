@@ -23,3 +23,15 @@ Second step:
 [branch "master"]
         remote = component
         merge = refs/heads/master
+
+3RD step:
+chmod  500  ~/username/.git/sshkey4.git.pub // otherwise git complain access right are too open
+                                            // for PUBLIC key.
+
+4TH step:
+ssh-add -l
+// if you cannot see your key PRIVATE key on the list
+4096 2d:78:55:96:b7:0a:b3:ff:2f:xx:xx:xx:xx:xx:9b:a6 sshkey4.git (RSA)
+
+//then add by
+ssh-add ~/username/.git/sshkey4.git
