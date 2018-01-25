@@ -1,2 +1,2 @@
 #/bin/bash
-git add --all && git status && git commit -F ./bin/commit.txt
+git add --all && git status && git commit -F commit.txt
