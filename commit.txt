@@ -1,2 +1,1 @@
- Config registered & view, but view
-where is bug ??  Bug found  $this->loadViewsFrom(resource_path('/views/LogTailer'), but it is still looking for blade under vendor/
+Config registered & view, but view is still looking for blade under resource/view/vendor/
