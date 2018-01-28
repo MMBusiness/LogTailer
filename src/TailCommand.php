@@ -7,7 +7,7 @@ use Symfony\Component\Process\Process;
 
 class TailCommand extends Command
 {
-    protected $signature = 'tail {--LogDir = $logDirectory}{--lines=100}';
+    protected $signature = 'tail {--LogDir}{--lines=100}';
     protected $description = 'Tail the latest updated logfile even from subdirectory  ';
     public function handle()
     {
