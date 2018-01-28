@@ -9,6 +9,7 @@ class TailCommand extends Command
 {
     protected $signature = 'tail {--f}{--lines=100}';
     protected $description = 'Tail the latest updated logfile even from subdirectory  ';
+
     public function handle()
     {
         $logDirectory = storage_path('logs');  //location for log file
@@ -18,12 +19,13 @@ class TailCommand extends Command
         }
         $lines = $this->option('lines');
         $logDirectory = $this->option('path');
-        $this->info("start tailing {$path}  {$lines} lines");
+        $this->info("start tailing {$logDirectory}  {$lines} lines");
       //  $this->info("start tailing {$lines} lines ");
-        $tailCommand = "tail -f {$path} -n {$lines} ".escapeshellarg($path);
+     //    $tailCommand = "tail -f {$path} -n {$lines} ".escapeshellarg($path);
+         $tailCommand = "tail -f {$logDirectory} -n {$lines} ";
         (new Process($tailCommand))
             ->setTimeout(null)
-            ->run(function ($type, $path, $line) {
+            ->run(function ($type, $logDirectory, $line) {
                 $this->output->write($line);
             });
     }
