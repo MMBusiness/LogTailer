@@ -1,1 +1,1 @@
-packiagst do not update composer package automatticly after git update, Why ?
+packiagst works again !
