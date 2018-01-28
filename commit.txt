@@ -1,1 +1,1 @@
-Config registered & view, but view is still looking for blade under resource/view/vendor/
+options lines & folder. Folder option does not work yet.
