@@ -1,1 +1,1 @@
-packist do not updatecomposer package atomaticly after git update, Why ?
+packiagst do not update composer package automatticly after git update, Why ?
