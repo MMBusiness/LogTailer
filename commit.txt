@@ -1,1 +1,1 @@
-lack of config file, do not work yet
+packist do not updatecomposer package atomaticly after git update, Why ?
