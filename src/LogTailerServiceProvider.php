@@ -22,8 +22,8 @@ class LogTailerServiceProvider extends ServiceProvider
     { //
       //  $this->registerConfig();
       //  $this->registerViews();
-       $configPath = __DIR__.'/Config/config.php';
-       $this->publishes([$configPath => config_path('config.php')], 'config');
+       //$configPath = __DIR__.'/Config/config.php';
+       //$this->publishes([$configPath => config_path('config.php')], 'config');
 
         // delicated route file for packages
         include __DIR__.'/routes.php';
