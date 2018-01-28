@@ -20,8 +20,11 @@ class LogTailerServiceProvider extends ServiceProvider
 
     public function boot()
     { //
-        $this->registerConfig();
-        $this->registerViews();
+      //  $this->registerConfig();
+      //  $this->registerViews();
+       $configPath = __DIR__.'/Config/config.php';
+       $this->publishes([$configPath => config_path('config.php')], 'config');
+
         // delicated route file for packages
         include __DIR__.'/routes.php';
     }
@@ -46,32 +49,32 @@ class LogTailerServiceProvider extends ServiceProvider
 
     }
 
-    protected function registerConfig()
-     {
-         $this->publishes([
-             __DIR__.'/Config/config.php' => config_path('user.php'),
-         ], 'config');
-         $this->mergeConfigFrom(
-             __DIR__.'/Config/config.php', 'user'
-         );
-     }
+     //protected function registerConfig()
+    // {
+    //     $this->publishes([
+    //         __DIR__.'/Config/config.php' => config_path('user.php'),
+    //     ], 'config');
+    //     $this->mergeConfigFrom(
+    //         __DIR__.'/Config/config.php', 'user'
+      //   );
+    // }
 
      /**
      * Register views.
      *
      * @return void
      */
-    public function registerViews()
-    {
-        $viewPath = resource_path('views/modules/user');  // DESTANATION ->
-        $sourcePath = __DIR__.'/Views';
-        $this->publishes([
-            $sourcePath => $viewPath
-        ],'views');
+    //public function registerViews()
+    //{
+    //    $viewPath = resource_path('views/modules/user');  // DESTANATION ->
+    //    $sourcePath = __DIR__.'/Views';
+    //    $this->publishes([
+    //        $sourcePath => $viewPath
+    //    ],'views');
       //  $this->loadViewsFrom(array_merge(array_map(function ($path) {
       //      return $path . '/modules/user';
       //  }, \Config::get('view.paths')), [$sourcePath]), 'user');
-    }
+  //  }
 
 
     public function provides()
