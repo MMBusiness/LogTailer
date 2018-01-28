@@ -23,7 +23,7 @@ class TailCommand extends Command
         $tailCommand = "tail -f {$path} -n {$lines} ".escapeshellarg($path);
         (new Process($tailCommand))
             ->setTimeout(null)
-            ->run(function ($type, $line) {
+            ->run(function ($type, $path, $line) {
                 $this->output->write($line);
             });
     }
