@@ -1,5 +1,5 @@
 # LogTailer
-First Core component:  LogTailer 0.0.1
+First Core component:  LogTailer 0.0.3
 
 composer require mikromike/logtailer --dev-master
 

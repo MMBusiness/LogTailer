@@ -20,5 +20,5 @@ mikromike/logtailer Tail for log files
 #composer validate
 ./composer.json is valid
 
-#composer require mikromike/logtailer
+#composer require mikromike/logtailer -dev
 // way to install package via composer
