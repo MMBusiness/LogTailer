@@ -27,11 +27,17 @@ class LogTailerServiceProvider extends ServiceProvider
 
         // delicated route file for packages
      include __DIR__.'/routes.php';   // ok
-
-      $this->loadViewsFrom(__DIR__ . './views', 'logtailer');   // does not register
+     // - first the published/overwritten views (in case they have any changes)
+     $this->loadViewsFrom(resource_path('views/vendor/LogTailer'), '');
+      $this->loadViewsFrom(realpath(__DIR__.'./Views'), 'LogTailer');
+    //
+    //  $this->loadViewsFrom(__DIR__ . './views', 'logtailer');   // does not register
       $this->publishes([
         __DIR__ . './Views' => base_path('resources/views/vendor/LogTailer')
       ], 'views');
+
+      // publish config file
+       $this->publishes([__DIR__.'/Config' => config_path()], 'config');
 
     }
 
