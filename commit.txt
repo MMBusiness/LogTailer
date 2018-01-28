@@ -1,1 +1,1 @@
-$this->loadViewsFrom(__DIR__ . './views', 'LogTailer');   // does not register
+Still missing /vendor/mikromike/logtailer/srcView // where is bug ??   // does not register
