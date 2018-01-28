@@ -21,6 +21,7 @@ class LogTailerServiceProvider extends ServiceProvider
     public function boot()
     { //
         $this->registerConfig();
+        $this->registerViews();
         // delicated route file for packages
         include __DIR__.'/routes.php';
     }
@@ -41,7 +42,7 @@ class LogTailerServiceProvider extends ServiceProvider
 
 
              // register Blade view path
-             $this->loadViewsFrom(__DIR__.'/views', 'LogTailer');
+             $this->loadViewsFrom(__DIR__.'/Views', 'LogTailer');
 
     }
 
@@ -54,6 +55,23 @@ class LogTailerServiceProvider extends ServiceProvider
              __DIR__.'/Config/config.php', 'user'
          );
      }
+
+     /**
+     * Register views.
+     *
+     * @return void
+     */
+    public function registerViews()
+    {
+        $viewPath = resource_path('views/modules/user');  // DESTANATION ->
+        $sourcePath = __DIR__.'/Views';
+        $this->publishes([
+            $sourcePath => $viewPath
+        ],'views');
+      //  $this->loadViewsFrom(array_merge(array_map(function ($path) {
+      //      return $path . '/modules/user';
+      //  }, \Config::get('view.paths')), [$sourcePath]), 'user');
+    }
 
 
     public function provides()
