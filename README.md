@@ -1,6 +1,14 @@
 # LogTailer
-First Core component:      LogTailer
+First Core component:  LogTailer 0.0.1
 
 composer require mikromike/logtailer --dev-master
 
-"mikromike/logtailer": "@dev"
+To composer.json file
+
+"require": {
+    "php": ">=7.0.0",
+    "fideloper/proxy": "~3.3",
+    "laravel/framework": "5.5.*",
+    "laravel/tinker": "~1.0",
+    "mikromike/logtailer": "dev-master"
+},
