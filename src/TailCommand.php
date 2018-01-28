@@ -18,7 +18,7 @@ class TailCommand extends Command
             return;
         }
         $lines = $this->option('lines');
-        $logDirectory = $this->option('path');
+      //  $logDirectory = $this->option('path');
         $this->info("start tailing {$logDirectory}  {$lines} lines");
       //  $this->info("start tailing {$lines} lines ");
      //    $tailCommand = "tail -f {$path} -n {$lines} ".escapeshellarg($path);
