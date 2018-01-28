@@ -25,7 +25,7 @@ class TailCommand extends Command
       //   $tailCommand = "tail -f {$logDirectory} -n {$lines} ";
         (new Process($tailCommand))
             ->setTimeout(null)
-            ->run(function ($type, $logDirectory, $line) {
+            ->run(function ($type, $line) {
                 $this->output->write($line);
             });
     }
