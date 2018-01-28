@@ -1,1 +1,1 @@
-Still missing /vendor/mikromike/logtailer/srcView // where is bug ??   // does not register
+ where is bug ??  Bug found  $this->loadViewsFrom(resource_path('/views/LogTailer'), '');
