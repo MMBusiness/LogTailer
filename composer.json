@@ -17,4 +17,11 @@
         "url": "https://github.com/MMBusiness/LogTailer.git"
       }
     ]
+    "extra": {
+   "laravel": {
+     "providers": [
+       "Mikromike\\LogTailer\\LogTailerServiceProvider"
+     ]
+   }
+ }
 }
