@@ -1,1 +1,1 @@
-test config done, does it work ?? NO
+lack of config file, do not work yet
