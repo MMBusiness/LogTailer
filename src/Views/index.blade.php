@@ -1,9 +1,9 @@
-@extends('user::layouts.master')
+@extends('layouts.master')
 
 @section('content')
-    <h1>Hello World</h1>
+    <h1>Hello World from logtailer package </h1>
 
     <p>
-        This view is loaded from module: {!! config('user.name') !!}
+        This view is loaded from module: {!! Config('config.name') !!}
     </p>
 @stop
