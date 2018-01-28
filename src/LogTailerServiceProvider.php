@@ -11,8 +11,16 @@ class LogTailerServiceProvider extends ServiceProvider
      *
      * @return void
      */
+     /**
+         * Boot the application events.
+         *
+         * @return void
+         */
+
+
     public function boot()
-    {
+    { //
+        $this->registerConfig();
         // delicated route file for packages
         include __DIR__.'/routes.php';
     }
@@ -32,12 +40,21 @@ class LogTailerServiceProvider extends ServiceProvider
              }
 
 
-        //
-        // register our controller file  ?? WHY ??
-   // $this->app->make('Mikromike\LogTailer\Controllers\');
-   $this->loadViewsFrom(__DIR__.'/views', 'LogTailer');
+             // register Blade view path
+             $this->loadViewsFrom(__DIR__.'/views', 'LogTailer');
 
     }
+
+    protected function registerConfig()
+     {
+         $this->publishes([
+             __DIR__.'/Config/config.php' => config_path('user.php'),
+         ], 'config');
+         $this->mergeConfigFrom(
+             __DIR__.'/Config/config.php', 'user'
+         );
+     }
+
 
     public function provides()
  {
