@@ -21,7 +21,10 @@
    "laravel": {
      "providers": [
        "Mikromike\\LogTailer\\LogTailerServiceProvider"
-     ]
+     ],
+     "aliases": {
+                "LogTailer": "Mikromike\\LogTailer\\TailCommand"
+}
    }
  }
 }

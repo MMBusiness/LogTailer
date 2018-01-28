@@ -27,6 +27,16 @@ class LogTailerServiceProvider extends ServiceProvider
 
         // delicated route file for packages
         include __DIR__.'/routes.php';
+
+      $this->loadViewsFrom(__DIR__ . './views', 'LogTailer');
+      $this->publishes([
+        __DIR__ . './views' => base_path('resources/views/vendor/LogTailer')
+                ]);
+
+
+
+
+
     }
 
     /**
