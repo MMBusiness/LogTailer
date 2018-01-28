@@ -28,14 +28,10 @@ class LogTailerServiceProvider extends ServiceProvider
         // delicated route file for packages
      include __DIR__.'/routes.php';   // ok
 
-      $this->loadViewsFrom(__DIR__ . './views', 'LogTailer');   // does not register
+      $this->loadViewsFrom(__DIR__ . './views', 'logtailer');   // does not register
       $this->publishes([
-        __DIR__ . './views' => base_path('resources/views/vendor/LogTailer')
-                ]);
-
-
-
-
+        __DIR__ . './Views' => base_path('resources/views/vendor/LogTailer')
+      ], 'views');
 
     }
 
@@ -52,11 +48,8 @@ class LogTailerServiceProvider extends ServiceProvider
                      TailCommand::class,
                  ]);
              }
-
-
-             // register Blade view path
+           // register Blade view path
              $this->loadViewsFrom(__DIR__.'/Views', 'LogTailer');
-
     }
 
      //protected function registerConfig()
