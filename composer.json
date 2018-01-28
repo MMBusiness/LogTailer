@@ -11,17 +11,12 @@
           "Mikromike\\LogTailer\\": "src/"
         }
     },
-    "repositories": [
-      {
-        "type": "vcs",
-        "url": "https://github.com/MMBusiness/LogTailer.git"
-      }
-    ]
-    "extra": {
+
+  "extra": {
    "laravel": {
      "providers": [
        "Mikromike\\LogTailer\\LogTailerServiceProvider"
      ]
    }
- }
+ },
 }
