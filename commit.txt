@@ -1,1 +1,1 @@
-packiagst works again !
+$this->loadViewsFrom(__DIR__ . './views', 'LogTailer');   // does not register
