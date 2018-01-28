@@ -13,6 +13,7 @@ class TailCommand extends Command
     public function handle()
     {
         $logDirectory = storage_path('logs');  //location for log file
+
         if (! $path = $this->findLatestLogFile($logDirectory)) {
             $this->warn("Could not find a log file in `{$logDirectory}`.");
             return;
