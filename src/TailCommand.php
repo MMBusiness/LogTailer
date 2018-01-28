@@ -18,6 +18,7 @@ class TailCommand extends Command
             return;
         }
         $lines = $this->option('lines');
+        $this->info("start tailing {$path}");
         $tailCommand = "tail -f -n {$lines} ".escapeshellarg($path);
 
         (new Process($tailCommand))
