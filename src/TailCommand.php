@@ -11,12 +11,13 @@ class TailCommand extends Command
     protected $description = 'Tail the latest updated logfile even from subdirectory  ';
     public function handle()
     {
-        $logDirectory = storage_path('logs');
+        $logDirectory = storage_path('logs');  //location for log file
         if (! $path = $this->findLatestLogFile($logDirectory)) {
             $this->warn("Could not find a log file in `{$logDirectory}`.");
             return;
         }
         $lines = $this->option('lines');
+        $logDirectory = $this->option('LogDir');
         $this->info("start tailing {$path}");
         $tailCommand = "tail -f -n {$lines} ".escapeshellarg($path);
         (new Process($tailCommand))
