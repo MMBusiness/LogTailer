@@ -7,7 +7,7 @@ use Symfony\Component\Process\Process;
 
 class TailCommand extends Command
 {
-    protected $signature = 'tail {--LogDir}{--lines=100}';
+    protected $signature = 'tail {--f}{--lines=100}';
     protected $description = 'Tail the latest updated logfile even from subdirectory  ';
     public function handle()
     {
@@ -17,8 +17,9 @@ class TailCommand extends Command
             return;
         }
         $lines = $this->option('lines');
-        $logDirectory = $this->option('LogDir');
+        $logDirectory = $this->option('$path');
         $this->info("start tailing {$path}");
+        $this->info("start tailing {$lines} lines ");
         $tailCommand = "tail -f {$path} -n {$lines} ".escapeshellarg($path);
         (new Process($tailCommand))
             ->setTimeout(null)
