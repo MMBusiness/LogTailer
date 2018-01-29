@@ -9,7 +9,7 @@ trait Test {
     public static function Init()
     {
         Route::get('/test', function(){
-            //return view('jihuu');
+            return view('jihuu');
          die('Route works from package! namespace Mikromike\LogTailer');
         });
     }
