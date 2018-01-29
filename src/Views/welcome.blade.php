@@ -82,7 +82,8 @@
                   <h1>Hello World from logtailer package </h1>
 
                   <p>
-                      This view is loaded from module: {!! Config('config.name') !!}
+                      This view is loaded from namespace Mikromike\LogTailer\Test;
+                      by Test::Init();
                   </p>
                 </div>
 
