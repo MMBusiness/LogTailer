@@ -1,0 +1,15 @@
+Two ways to loadup route from package
+1) route file to point return view('vendor/LogTailer/welcome'
+   vendor/package name folder under resource/view
+
+2)   use Illuminate\Support\Facades\Route;
+trait Test {
+
+    public static function Init()
+    {
+        Route::get('/test', function(){
+            return view('vendor/LogTailer/welcome');
+        //  die('Route works from package! namespace Mikromike\LogTailer');
+        });
+
+Which route will be called by using Facades\Route.
