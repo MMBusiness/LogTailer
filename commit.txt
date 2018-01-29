@@ -1,1 +1,1 @@
-die('Route works from package! namespace Mikromike\LogTailer');   yes, works
+    //return view('jihuu');  via package does not work yet.
