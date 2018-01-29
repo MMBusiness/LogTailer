@@ -1,1 +1,2 @@
-  die('Route works from package! namespace Mikromike\LogTailer'); DOES IT ?????
+  die('Route works from package! namespace Mikromike\LogTailer'); DOES IT ?????  YES ;-D
+  
