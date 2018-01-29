@@ -3,7 +3,7 @@
     "description": "Tail for log files via LARAVEL cli",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {},
     "require-dev": {},
     "autoload": {
