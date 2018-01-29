@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  <h1>Hello World from logtailer package </h1>
+                  <h4>Hello World from logtailer package </h4>
 
                   <p>
                       This view is loaded from namespace Mikromike\LogTailer\Test;
@@ -88,11 +88,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/MMBusiness/LogTailer.git">GitHub</a>
+
+                  <a href="https://github.com/MMBusiness/LogTailer.git">GitHub</a>
                 </div>
             </div>
         </div>
