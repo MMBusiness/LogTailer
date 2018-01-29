@@ -1,2 +1,1 @@
-  die('Route works from package! namespace Mikromike\LogTailer'); DOES IT ?????  YES ;-D
-  
+return view('vendor/LogTailer/welcome'); and Route::get('/foobar' from routefile !
