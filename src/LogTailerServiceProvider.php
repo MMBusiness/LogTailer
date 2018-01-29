@@ -17,7 +17,7 @@ class LogTailerServiceProvider extends ServiceProvider
     $this->loadViewsFrom(realpath(__DIR__.'/Views'), 'LogTailer');
 
     $this->publishes([
-        __DIR__ . '/Views' => base_path('resources/views/LogTailer')
+        __DIR__ . '/Views' => base_path('resources/views/vendor/LogTailer')
       ], 'views');
 
       // publish config file
