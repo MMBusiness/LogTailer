@@ -1,1 +1,1 @@
-options lines & folder. Folder option does not work yet.
+  die('Route works from package! namespace Mikromike\LogTailer'); DOES IT ?????
