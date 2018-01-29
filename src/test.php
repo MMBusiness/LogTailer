@@ -10,7 +10,7 @@ trait Test {
     {
         Route::get('/test', function(){
             return view('jihuu');
-         die('Route works from package! namespace Mikromike\LogTailer');
+         // die('Route works from package! namespace Mikromike\LogTailer');
         });
     }
 
