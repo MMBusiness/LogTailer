@@ -1,1 +1,1 @@
-  Local composer added to composer.json
+  Local composer installed
