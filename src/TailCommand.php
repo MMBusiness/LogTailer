@@ -30,7 +30,7 @@ class TailCommand extends Command
         }
         $lines = $this->option('lines');
         $this->info("start tailing  {$logDirectory} ");
-        $this->info("start tailing file  {$logFile} ");
+        //$this->info("start tailing file  {$logFile} ");
         $tailCommand = "tail -f -n {$lines} ".escapeshellarg($path);
 
         (new Process($tailCommand))
