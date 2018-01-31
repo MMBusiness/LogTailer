@@ -1,0 +1,12 @@
+DOES NOT WORK YET
+
+[Composer\Downloader\TransportException]
+  The "https://localhost:8001/packages.json" file could not be downloaded: failed to open stream: Connection ref
+  used
+
+
+
+{
+"type": "composer",
+"url": "https://localhost:8001"
+},
