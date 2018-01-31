@@ -6,6 +6,15 @@ use Illuminate\Support\ServiceProvider;
 
 class LogTailerServiceProvider extends ServiceProvider
 {
+/**
+  * Indicates if loading of the provider is deferred.
+  *
+  * @var bool
+  */
+ protected $defer = true;
+
+
+
 
     public function boot()
     { //
@@ -25,6 +34,16 @@ class LogTailerServiceProvider extends ServiceProvider
 
     }
 
+
+      // second way not yet actived
+
+//      {
+//       $this->publishes([
+//           __DIR__.'/config/tail.php' => config_path('tail.php'),
+//       ], 'config');
+//   }
+
+
     public function register()
     {
       // Console command
@@ -36,6 +55,17 @@ class LogTailerServiceProvider extends ServiceProvider
            // register Blade view path
              $this->loadViewsFrom(__DIR__.'/Views', 'LogTailer');
     }
+
+
+    // test second option whatis different than above
+//    {
+//    $this->app['command.tail'] = $this->app->share(
+  //      function ($app) {
+  //          return new TailCommand();
+  //      }
+  //  );
+  //  $this->commands('command.tail');
+//}
 
 
     public function provides()

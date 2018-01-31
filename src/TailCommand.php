@@ -17,6 +17,9 @@ class TailCommand extends Command
     */
    protected $name = 'tail';
 
+
+
+
     protected $signature = 'tail {--lines=100}';
     protected $description = 'Tail the latest updated logfile even from subdirectory  ';
 
