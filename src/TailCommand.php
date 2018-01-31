@@ -4,9 +4,22 @@ use SplFileInfo;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Symfony\Component\Process\Process;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
+
 
 class TailCommand extends Command
 {
+  /**
+    * The console command name.
+    *
+    * @var string
+    */
+   protected $name = 'tail';
+
+
+
+
     protected $signature = 'tail {--lines=100}';
     protected $description = 'Tail the latest updated logfile even from subdirectory  ';
 
