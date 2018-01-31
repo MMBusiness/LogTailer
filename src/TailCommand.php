@@ -17,9 +17,6 @@ class TailCommand extends Command
     */
    protected $name = 'tail';
 
-
-
-
     protected $signature = 'tail {--lines=100}';
     protected $description = 'Tail the latest updated logfile even from subdirectory  ';
 
@@ -32,7 +29,7 @@ class TailCommand extends Command
             return;
         }
         $lines = $this->option('lines');
-        $this->info("start tailing  {$logDirectory}");
+        $this->info("start tailing  {$logDirectory} {$logFile}  ");
         $tailCommand = "tail -f -n {$lines} ".escapeshellarg($path);
 
         (new Process($tailCommand))
